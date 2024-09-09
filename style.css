@@ -1,0 +1,168 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(90deg, rgba(0,0,0,0.977109593837535) 0%, rgba(36,37,37,1) 57%, rgba(106,107,107,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+}
+
+img {
+    width: 80px; /* Ajustado para ser um pouco menor em dispositivos menores */
+    margin-bottom: 20px;
+}
+
+.container-input {
+    max-width: 90%; /* Ajustado para usar a largura disponível em dispositivos menores */
+    width: 480px; /* Mantém o tamanho em telas maiores */
+    margin: 14px 0;
+}
+
+.container-input span {
+    color: #fff;
+    font-size: 22px;
+    text-align: center; /* Centraliza o texto */
+    display: block; /* Garante que o texto ocupe a largura disponível */
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    border-radius: 5px;
+    background: radial-gradient(circle, rgba(255,255,255,1) 72%, rgba(144,161,207,1) 90%, rgba(204,194,231,1) 100%);
+    height: 18px;
+    outline: none;
+    margin-top: 8px;
+}
+
+.button-cta {
+    height: 40px;
+    background: radial-gradient(circle, rgba(111,63,251,1) 0%, rgba(70,183,252,1) 54%, rgba(70,121,252,1) 100%);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 40px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    width: 100%; /* Garante que o botão use a largura disponível */
+}
+
+.button-cta:hover {
+    opacity: 0.8;
+}
+
+.button-cta:active {
+    opacity: 0.6;
+}
+
+.container-password {
+    max-width: 90%; /* Ajustado para usar a largura disponível em dispositivos menores */
+    width: 480px; /* Mantém o tamanho em telas maiores */
+    margin: 14px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.title {
+    text-align: center;
+    color: #fff;
+    font-size: 28px;
+    margin: 24px 0 8px 0;
+}
+
+.password {
+    height: 60px;
+    background: radial-gradient(circle, rgba(255,255,255,1) 72%, rgba(144,161,207,1) 90%, rgba(204,194,231,1) 100%);
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    border: 1px solid #313131;
+    transition: transform 0.5s;
+    width: 100%; /* Garante que o campo de senha use a largura disponível */
+}
+
+.password:hover {
+    transform: scale(1.05);
+}
+
+.tooltip {
+    color: #fff;
+    position: relative;
+    top: 20px;
+    padding: 6px 8px;
+    background-color: rgb(15,15,15);
+    text-align: center;
+    font-size: 16px;
+    border-radius: 6px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.hiden {
+    display: none;
+}
+
+.container-password:hover .tooltip {
+    visibility: visible;
+    bottom: 50px;
+    opacity: 1;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .container-input,
+    .container-password {
+        max-width: 90%;
+        width: 100%;
+    }
+    
+    .button-cta {
+        font-size: 16px;
+    }
+    
+    .title {
+        font-size: 24px;
+    }
+    
+    .password {
+        height: 50px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    img {
+        width: 60px;
+    }
+    
+    .container-input span {
+        font-size: 18px;
+    }
+    
+    .button-cta {
+        font-size: 14px;
+    }
+    
+    .title {
+        font-size: 20px;
+    }
+    
+    .password {
+        height: 40px;
+        font-size: 16px;
+    }
+}
